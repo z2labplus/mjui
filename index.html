@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Neo Mahjong</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              neo: {
+                bg: '#E0E7FF', // Light Indigo
+                white: '#FFFFFF',
+                black: '#1a1a1a',
+                blue: '#3b82f6', // Bright Neo Blue
+                yellow: '#facc15', // Bright Yellow
+                pink: '#ec4899', // Hot Pink
+                green: '#22c55e',
+              }
+            },
+            fontFamily: {
+              sans: ['Space Mono', 'monospace'],
+              display: ['Archivo Black', 'sans-serif'],
+            },
+            boxShadow: {
+              'neo': '5px 5px 0px 0px rgba(0,0,0,1)',
+              'neo-lg': '8px 8px 0px 0px rgba(0,0,0,1)',
+              'neo-sm': '3px 3px 0px 0px rgba(0,0,0,1)',
+            }
+          },
+        },
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background-color: #E0E7FF;
+        color: #000;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: none;
+        font-family: 'Space Mono', monospace;
+      }
+      .preserve-3d {
+        transform-style: preserve-3d;
+      }
+      .backface-hidden {
+        backface-visibility: hidden;
+      }
+      .perspective-game {
+        perspective: 1000px; 
+        perspective-origin: 50% 50%;
+      }
+      /* Dot Grid Background Pattern */
+      .bg-dot-grid {
+        background-image: radial-gradient(#1a1a1a 2px, transparent 2px);
+        background-size: 32px 32px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.3.1",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+    "react-dom": "https://esm.sh/react-dom@18.3.1",
+    "react/jsx-runtime": "https://esm.sh/react@18.3.1/jsx-runtime",
+    "framer-motion": "https://esm.sh/framer-motion@11.0.24?external=react,react-dom",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
